@@ -4,7 +4,7 @@ import java.io.Serializable
 import javax.persistence.*
 
 @Entity
-@Table(name = "todo_model")
+@Table(name = "todo_models")
 class TodoModel : Serializable{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

@@ -22,4 +22,9 @@ class TodoController(@Autowired val toDoRepository: ToDoRepository){
     fun update(@RequestBody todoModel: TodoModel){
         todoModel.getTask()?.let { todoModel.getId()?.let { it1 -> toDoRepository.update(it, it1) } }
     }
+
+    @DeleteMapping("/delete")
+    fun delete(@RequestParam id:Long){
+        toDoRepository.deleteById(id);
+    }
 }
